@@ -1,0 +1,644 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+    font-family: 'PT-Serif', serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #5e5e5e;
+}
+
+/*------HRADER------- */
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Roboto;
+    height: 150px;
+    padding: 20px;
+    max-width: 1170px;
+    margin: 0 auto;
+    /* for small screens*/
+    padding: 0 15px;
+}
+
+.logo {
+    width: 80px;
+}
+
+.nav {
+    padding: 0;
+    margin: 10px;
+}
+
+.nav-wrapper {
+    list-style: none;
+    display: flex;
+}
+
+.nav-wrapper li a {
+    position: relative;
+    color: #323232;
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 36px;
+    padding: 0px 14px;
+    /*рамка кнопки меню*/
+    border: 3px solid transparent;
+    display: block;
+    padding: 20 px;
+    transition: all .3s;
+}
+
+.nav-wrapper__item:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: #12aacb;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s liner;
+}
+
+.nav-wrapper__item:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-wrapper a:hover {
+    /*квадрат кнопки
+    border-color: #12aacb
+;
+    /* цвет лого*/
+    border-color: #12aacb; 
+}
+
+.nav-wrapper li+li {
+    padding-left: 10px;
+}
+
+/* .nav-wrapper__sub-item {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #12aacb
+;
+    padding: 15px;
+    min-width: 200px;
+} */
+
+.socials {
+    border: solid;
+}
+
+.socials-wrapper {
+    list-style: none;
+}
+
+.main-header__top {
+    max-width: 1170px;
+    padding: 0px 20px;
+    height: 20px;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+}
+
+.main-header__top a {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    color: thistle;
+    font-size: 12px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.phone:before {
+    padding-right: 5px;
+    content: "\f095";
+    font-family: 'icomoon';
+    font-size: 14px;
+}
+
+.vk:before {
+    content: "\f189";
+    font-family: 'icomoon';
+    font-size: 18px;
+}
+
+/* .slider {
+    background-image: url('../img/slider.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 650px;
+    max-height: 350px;
+} 
+*/
+
+/* -------- Слайдер: ------------*/
+
+.slider {
+    /*max-width: 90%;*/
+    /* Положение элемента устанавливается относительно его исходной позиции: */
+    position: relative;
+    /* Центрируем по горизонтали: */
+    margin: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Картинка масштабируется по отношению к родительскому элементу: */
+
+.slider .item img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    /* Элемент меняет размер так, чтобы заполнить блок и сохранить пропорции: */
+    object-fit: cover;
+    width: auto;
+    height: 500px;
+    /* Плавное переключение картинок */
+    transition: all linear .3s;
+}
+
+/* Кнопки назад и вперёд: */
+
+.slider .previous, .slider .next {
+    /* Добавляет курсору иконку, когда тот оказывается над кнопкой: */
+    cursor: pointer;
+    /* Положение элемента задаётся относительно границ браузера: */
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 0 16px;
+    /* Оформление самих кнопок: */
+    color: #12aacb;
+    font-weight: bold;
+    font-size: 50px;
+    /* Плавное появление фона при наведении курсора: */
+    transition: 0.6s ease;
+    /* Скругление границ: */
+    border-radius: 0 3px 3px 0;
+}
+
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.slider .previous {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* При наведении курсора на кнопки добавляем фон кнопок: */
+
+.slider .previous:hover, .slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Анимация слайдов: */
+
+.slider .item {
+    display: block;
+    width: 1000px;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    /* Устанавливаем и изменяем степень прозрачности: */
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/* -------- Слайдер: ------------*/
+
+.slider__inner {
+    text-align: center;
+    font-size: 30px;
+    font-family: Roboto;
+    font-weight: 700;
+    color: white;
+    margin: 0 auto;
+    letter-spacing: 0.5px;
+}
+
+.slider__title {
+    padding-bottom: 30px;
+}
+
+.slider__text {
+    font-size: 18px;
+    color: #d3d2d2;
+    padding-bottom: 20px;
+}
+
+.default-btn {
+    font-size: 14px;
+    line-height: 24px;
+    color: white;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    padding: 8px 24px 8px 24px;
+    border: 2px solid #12aacb;
+}
+
+/*--------------------------------------------HEADER------------------------------------- */
+
+/*--------------------------------------------ABOUT---------------------------------------*/
+
+/*.about {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 0px 30px;
+}*/
+
+/*.form__content*/
+
+.about__top {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1170px;
+    align-items: center;
+    margin: 0 auto;
+    padding: 50px 15px 30px;
+}
+
+/*   BORDER  */
+
+/*.border {
+    border-top: 1px solid #c2c2c2;
+}*/
+
+/*   BORDER  */
+
+.about__title-box, .form__title-box {
+    max-width: 520px;
+    padding-left: 140px;
+    position: relative;
+}
+
+.about__title-box:before, .form__title-box:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background-color: #12aacb;
+    left: 0;
+    top: 11px;
+}
+
+.about__title, .form__title {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 24px;
+    color: #212020;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+}
+
+.about__text, .form__text {
+    letter-spacing: 0.1px;
+}
+
+.about__btn a {
+    color: #373636;
+    line-height: 24px;
+    letter-spacing: 0.25px;
+    padding: 5px 38px;
+    border: 3px solid #e6e6e6;
+    text-decoration: none;
+}
+
+.about__items {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1170px;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    padding: 50px 15px 0px;
+}
+
+.about__item {
+    max-width: 300px;
+    text-align: center;
+    padding: 0px 0px 80px;
+    position: relative;
+    min-height: 300px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 7px 24.3px 2.7px rgba(91, 89, 89, 0.14);
+}
+
+.about__item-title {
+    color: #212020;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
+    padding: 24px 0px;
+}
+
+.about__item-text {
+    letter-spacing: 0.1px;
+    padding: 0px 30px;
+    margin-bottom: 60px;
+}
+
+.about__item-btn {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+}
+
+.about__item-btn .default-btn {
+    color: #373636;
+    text-decoration: none;
+}
+
+.about__item-link {
+    color: #050505;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    border-bottom: 1px solid #050505;
+    margin-right: 60px;
+}
+
+.form {
+    display: block;
+    max-width: 1170px;
+    margin: 30px auto;
+    padding: 0px 15px;
+}
+
+/* .form__box-inner {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1170px;
+    margin: 40px auto;
+} */
+
+.form__box-inner {
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin: 40px auto;
+}
+
+.form__box-left {
+    max-width: 260px;
+    width: 100%;
+    margin-right: 230px;
+}
+
+.form__box-right {
+    max-width: 555px;
+    width: 100%;
+}
+
+.form__box-inner label, .form__box-inner input, .form__box-inner textarea, .form__box-inner select {
+    display: block;
+    width: 100%;
+}
+
+.form__box-inner label {
+    line-height: 36px;
+    color: #282828;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form__box-inner input {
+    margin-bottom: 8px;
+    outline: none;
+    height: 30px;
+    border: 1px solid #e6e6e6;
+    padding: 0px 10px;
+}
+
+.form__box-inner select {
+    outline: none;
+    height: 30px;
+    border: 1px solid #e6e6e6;
+    padding-left: 17px;
+}
+
+.form__box-inner .jq-selectbox.jqselect {
+    display: block;
+    width: 100%;
+}
+
+.form__box-inner .jq-selectbox__select {
+    height: 30px;
+    border: 1px solid #e6e6e6;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+.form__box-inner textarea {
+    outline: none;
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+    height: 100px;
+    resize: none;
+    margin-bottom: 40px;
+    float: right;
+}
+
+.form__box-inner button {
+    background-color: transparent;
+    color: #282828;
+}
+
+/*--------ABOUT-------*/
+
+/*--------GOVERNMENT-------*/
+
+.government {
+    padding: 55px 0px 40px;
+    background-image: url(../img/gov-fon.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 700px;
+    background-size: cover;
+    margin-bottom: 40px;
+}
+
+.government__inner {
+    max-width: 1170px;
+    margin: 100px auto;
+    height: 545px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.government-item {
+    max-width: 360px;
+    height: 260px;
+    padding: 0px 20px;
+    /*background-color: rgba(133, 135, 136, 0.5);*/
+    padding: 130px 0px 30px;
+    position: relative;
+}
+
+.government__text:before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #12aacb
+;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.government__text:after {
+    content: "\f00c";
+    font-family: 'icomoon';
+    font-style: 20px;
+    position: absolute;
+    top: 9px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.government__text {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0px 15px;
+    line-height: 24px;
+    color: #d3d3d2;
+    letter-spacing: 0.1px;
+}
+
+/*--------GOVERNMENT-------*/
+
+/*-------FOOTER---------*/
+
+.footer__content {
+    background-color: #595959;
+    padding: 20px 0px 30px;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.footer__map {
+    padding: 10px;
+}
+
+.footer__map iframe {
+    width: 100%;
+    width: 630px;
+    height: 250px;
+}
+
+.footer__title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    color: #fff;
+    line-height: 36px;
+    letter-spacing: 0.5px;
+}
+
+.footer__text {
+    color: #d3d2d2;
+    margin-bottom: 20px;
+}
+
+.footer__info {
+    max-width: 360px;
+    margin: 0px 20px;
+}
+
+.footer__list li {
+    margin-top: 10px;
+}
+
+.footer__list a {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.25px;
+    color: #fff;
+    font-weight: 400;
+    padding-left: 33px;
+    position: relative;
+}
+
+.footer__list .phone:before {
+    content: '\f095';
+    position: absolute;
+    font-size: 24px;
+    left: 0;
+    color: #12aacb
+;
+    font-family: 'icomoon';
+}
+
+.footer__list .adress:before {
+    content: '\f041';
+    position: absolute;
+    font-size: 24px;
+    left: 0;
+    color: #12aacb
+;
+    font-family: 'icomoon';
+}
+
+.footer__copy {
+    background-color: #303030;
+    text-align: center;
+    font-size: 12px;
+    line-height: 24px;
+    padding: 8px 0;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*-------FOOTER---------*/
+
+/*--------ADAPYIVE------*/
+
+.header__btn-menu {
+    /*отключаем bars  с десктопа*/
+    display: none;
+    font-size: 44px;
+}

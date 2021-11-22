@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" , initial-scale=1 maximum-scale=1.0, user-scalable=0>
+    <title>Центр абилитации "Попутный Ветер"</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet"
+        type="text/css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+
+    <!-- следующие 3 строки нужны для корректного отображения семантических элементов HTML5 в старых версиях Internet Explorer-->
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!--HEADER-->
+    <header>
+        <div class="main-header__top">
+            <a href="https://vk.com/centerdetyam" class="vk" target="_blank"></a>
+            <a href="tel:79307502450" class="phone"> +7 4842 22 07 09</a>
+        </div>
+        <div class="main-header">
+            <div class="logo">
+                <img src='img/FairWindLogo.jpg' />
+            </div>
+            <!--BURGER-->
+            <div class="burger">
+            </div>
+            <!--BURGER-->
+            <nav class="nav">
+                <div class="nav__body">
+                    <ul class="nav-wrapper" id="nav-wrapper">
+                        <li class="nav-wrapper__item"><a href="#">Главная</a></li>
+                        <li class="nav-wrapper__item"><a href="#">О нас</a></li>
+                        <li class="nav-wrapper__item"><a href="#">Специалисты</a>
+                        <li class="nav-wrapper__item"><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--HEADER-->
+    <section class="slider">
+        <div class="container">
+            <div class="slider__inner">
+                <!-- Основной блок слайдера -->
+                <div class="slider">
+                    <!-- Первый слайд -->
+                    <div class="item">
+                        <img src="img/slider1.jpg">
+                    </div>
+                    <!-- Второй слайд -->
+                    <div class="item">
+                        <img src="img/slider2.jpg">
+                    </div>
+                    <!-- Третий слайд -->
+                    <div class="item">
+                        <img src="img/slider3.jpg">
+                    </div>
+                    <!-- Кнопки-стрелочки -->
+                    <a class="previous" onclick="previousSlide()">&#10094;</a>
+                    <a class="next" onclick="nextSlide()">&#10095;</a>
+                </div>
+                <!-- <div class="slider__title">Центр абилитации фонда «Волонтеры-детям»</div>
+                <div class="slider__text">г.Калуга, ул. Маршала Жукова, 30а</div>
+                <a href="javascript:;" class="slider__btn default-btn">Записаться на консультацию</a> -->
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <div class="container">
+            <div class="border"></div>
+            <div class="about__top">
+                <div class="about__title-box">
+                    <div class="about__title">
+                        О нас
+                    </div>
+                    <div class="about__text">
+                        Центр абилитации и социальной реабилитации «Попутный ветер» был открыт калужским
+                        благотворительным фондом «ВОЛОНТЕРЫ-ДЕТЯМ» в конце 2014 года – это первое и единственное
+                        негосударственное некоммерческое учреждение подобного рода в Калужской области.
+                    </div>
+                </div>
+                <div class="about__btn">
+                    <a href="#">
+                        Показать все услуги
+                    </a>
+                </div>
+            </div>
+
+            <div class="about__items">
+                <div class="about__item">
+                    <div class="about__item-title">
+                        Диагностика
+                    </div>
+                    <div class="about__item-text">
+                        Оценка состояния ребенка, уровня его развития, поведенческих навыков, проводится комплексно
+                        всеми специалистами и ложится в основу при разработке индивидуального плана коррекции.
+                    </div>
+                    <div class="about__item-btn">
+                        <a class="about__item-link" href="#">Подробнее</a>
+                        <a href="javascript:;" class="default-btn">Записаться</a>
+                    </div>
+                </div>
+                <div class="about__item">
+                    <div class="about__item-title">
+                        Программа поддержки семей
+                    </div>
+                    <div class="about__item-text">
+                        Приоритетное значение - снижение уровня тревожности, эмоциональной неустойчивости родителей,
+                        тематические встречи, индивидуальные консультации, методическая помощь.
+                    </div>
+                    <div class="about__item-btn">
+                        <a class="about__item-link" href="#">Подробнее</a>
+                        <a href="javascript:;" class="default-btn">Записаться</a>
+                    </div>
+                </div>
+                <div class="about__item">
+                    <div class="about__item-title">
+                        Абилитация и реабилитация ребенка
+                    </div>
+                    <div class="about__item-text">
+                        На базе студий: нейрокоррекции, коммуникации, сенсомоторной коррекции (телесной терапии),
+                        логопеда-дефектолога, игровой, кулинарной и др.
+                    </div>
+                    <div class="about__item-btn">
+                        <a class="about__item-link" href="#">Подробнее</a>
+                        <a href="javascript:;" class="default-btn">Записаться</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="form">
+        <div class="container">
+            <div class="form__inner">
+                <div class="form__content">
+                    <div class="form__title-box">
+                        <div class="form__title">
+                            Получить консультацию
+                        </div>
+                        <div class="form__text">
+                            В Центре работают: психологи, нейропсихолог, кинезиолог, логопед-дефектолог, педагоги,
+                            тьюторы.
+                        </div>
+                    </div>
+                    <div class="form__box">
+                        <form>
+                            <div class="form__box-inner">
+                                <div class="form__box-left">
+                                    <label>
+                                        Контактный телефон
+                                        <input type="text">
+                                    </label>
+                                    <label>
+                                        ФИО
+                                        <input type="text">
+                                    </label>
+                                    <label>
+                                        Тема вопроса
+                                        <select>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="form__box-right">
+                                    <label>
+                                        Сообщение
+                                        <textarea></textarea>
+                                    </label>
+                                    <button class="default-btn" type="submit">Получить консультацию</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="government">
+        <div class="container">
+            <div class="government__inner">
+                <div class="government-item">
+                    <div class="government__text">
+                        В 2018-19 годах деятельность Центра частично финансируется за счет средств гранта Президента
+                        Российской Федерации на развитие гражданского общества, предоставленного Фондом президентских
+                        грантов.
+                    </div>
+                </div>
+                <div class="government-item">
+                    <div class="government__text">
+                        В 2020 году Министерство труда и социальной защиты Калужской области выделило Центру субсидию на
+                        продолжение деятельности.
+                    </div>
+                </div>
+                <div class="government-item">
+                    <div class="government__text">
+                        Все, что мы делаем – возможно только благодаря поддержке тех, кто вместе с нами верит в каждого
+                        ребенка, независимо от его физических и ментальных особенностей и социального статуса.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__info">
+                        <div class="footer__title">Центр абилитации "Попутный Ветер"</div>
+                        <div class="footer__text">Центр абилитации и социальной реабилитации «Попутный ветер» был открыт
+                            калужским благотворительным фондом «ВОЛОНТЕРЫ-ДЕТЯМ»</div>
+                        <ul class="footer__list">
+                            <li><a class="phone" href="tel:+74842220709">+7 4842 22 07 09</a></li>
+                            <li><a class="adress" href="#">Калуга, ул. Маршала Жукова, 30А</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9264.281102181632!2d36.284538!3d54.514622!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x76d0791cde5bb2a1!2z0KbQtdC90YLRgCDQsNCx0LjQu9C40YLQsNGG0LjQuCAi0J_QvtC_0YPRgtC90YvQuSDQktC10YLQtdGAIg!5e0!3m2!1sru!2sru!4v1632751481491!5m2!1sru!2sru"
+                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <div class="container">
+                <div class="copy__text">
+                    © 2021 Попутный ветер. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/burger.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
