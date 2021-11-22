@@ -1,1 +1,1 @@
-# fairwind-gitgub.io
+# fairwind.io
