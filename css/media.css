@@ -1,7 +1,4 @@
 @media (max-width: 1000px) {
-	.slider {
-		display: none;
-	}
 
 	.nav {
 		text-size: 16px;
@@ -25,6 +22,7 @@
 	.about__text, .about__btn a {
 		font-size: 18px;
 		margin: 30px auto;
+		text-align: center;
 	}
 
 	.about__title-box, .form__title-box {
@@ -44,10 +42,12 @@
 	.about__btn {
 		text-align: center;
 	}
-	.government__inner{
+
+	.government__inner {
 		display: block;
 	}
-	.government-item{
+
+	.government-item {
 		max-width: 100%;
 		padding: 60px 0px 30px;
 		height: auto;
@@ -55,20 +55,25 @@
 }
 
 @media (max-width: 950px) {
-	.footer__inner{
+	.footer__inner {
 		display: block;
 		max-width: auto;
 	}
+
 	.footer__map iframe {
 		width: 100%;
 	}
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
+	.slider {
+		display: none;
+	}
+
 	.nav-wrapper {
 		position: fixed;
 		flex-direction: column;
-		background-color: #fff;
+		background: rgb(255, 255, 255);
 		opacity: 1;
 		width: 100%;
 		text-align: center;
@@ -80,6 +85,12 @@
 
 	.nav-wrapper_active {
 		left: 0%;
+		z-index: 100;
+	}
+
+	.nav-wrapper li a {
+		font-size: 24px;
+		line-height: 55px;
 	}
 
 	.burger {
@@ -111,7 +122,8 @@
 	.form__box-left, .form__box-right {
 		max-width: 100%;
 	}
-	.form__box-inner label{
+
+	.form__box-inner label {
 		margin-bottom: 8px;
 	}
 }
@@ -119,5 +131,9 @@
 @media (max-width: 400px) {
 	.government {
 		padding: 0px;
+	}
+
+	.government__inner {
+		margin-top: 60px;
 	}
 }

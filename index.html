@@ -3,28 +3,23 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width" , initial-scale=1 maximum-scale=1.0, user-scalable=0>
+    <meta name="viewport" content="width=device-width" , initial-scale=1, maximum-scale=1.0, user-scalable=0>
     <title>Центр абилитации "Попутный Ветер"</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet"
         type="text/css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
-
-    <!-- следующие 3 строки нужны для корректного отображения семантических элементов HTML5 в старых версиях Internet Explorer-->
-    <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-    <![endif]-->
 </head>
 
 <body>
-    <!--HEADER-->
+    <a name="header"></a>
     <header>
         <div class="main-header__top">
             <a href="https://vk.com/centerdetyam" class="vk" target="_blank"></a>
-            <a href="tel:79307502450" class="phone"> +7 4842 22 07 09</a>
+            <a href="tel:74842220709" class="phone"> +7 4842 22 07 09</a>
         </div>
         <div class="main-header">
             <div class="logo">
@@ -37,43 +32,32 @@
             <nav class="nav">
                 <div class="nav__body">
                     <ul class="nav-wrapper" id="nav-wrapper">
-                        <li class="nav-wrapper__item"><a href="#">Главная</a></li>
-                        <li class="nav-wrapper__item"><a href="#">О нас</a></li>
-                        <li class="nav-wrapper__item"><a href="#">Специалисты</a>
-                        <li class="nav-wrapper__item"><a href="#">Контакты</a></li>
+                        <li class="nav-wrapper__item"><a href="#header">Главная</a></li>
+                        <li class="nav-wrapper__item"><a href="#about">О нас</a></li>
+                        <li class="nav-wrapper__item"><a href="#form">Консультация</a>
+                        <li class="nav-wrapper__item"><a href="#footer">Контакты</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
-    <!--HEADER-->
-    <section class="slider">
-        <div class="container">
-            <div class="slider__inner">
-                <!-- Основной блок слайдера -->
-                <div class="slider">
-                    <!-- Первый слайд -->
-                    <div class="item">
-                        <img src="img/slider1.jpg">
-                    </div>
-                    <!-- Второй слайд -->
-                    <div class="item">
-                        <img src="img/slider2.jpg">
-                    </div>
-                    <!-- Третий слайд -->
-                    <div class="item">
-                        <img src="img/slider3.jpg">
-                    </div>
-                    <!-- Кнопки-стрелочки -->
-                    <a class="previous" onclick="previousSlide()">&#10094;</a>
-                    <a class="next" onclick="nextSlide()">&#10095;</a>
-                </div>
-                <!-- <div class="slider__title">Центр абилитации фонда «Волонтеры-детям»</div>
-                <div class="slider__text">г.Калуга, ул. Маршала Жукова, 30а</div>
-                <a href="javascript:;" class="slider__btn default-btn">Записаться на консультацию</a> -->
+    <!-- Swiper -->
+    <section>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/slider1.jpg"></div>
+                <div class="swiper-slide"><img src="img/slider2.jpg"></div>
+                <div class="swiper-slide"><img src="img/slider3.jpg"></div>
+                <div class="swiper-slide"><img src="img/slider4.jpg"></div>
+                <div class="swiper-slide"><img src="img/slider5.jpg"></div>
+                <div class="swiper-slide"><img src="img/slider6.jpg"></div>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
+    <a name="about"></a>
     <section class="about">
         <div class="container">
             <div class="border"></div>
@@ -138,6 +122,7 @@
             </div>
         </div>
     </section>
+    <a name="form"></a>
     <section class="form">
         <div class="container">
             <div class="form__inner">
@@ -213,6 +198,7 @@
             </div>
         </div>
     </section>
+    <a name="footer"></a>
     <footer class="footer">
         <div class="footer__content">
             <div class="container">
@@ -243,6 +229,7 @@
         </div>
     </footer>
     <script src="js/burger.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
